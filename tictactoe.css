@@ -1,0 +1,121 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffeead;
+    color: #ff6f69;
+}
+
+h1 {
+    color: currentColor;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    cursor: pointer;
+    position: relative;
+}
+
+.tile {
+    color: currentColor;
+    margin: 10px;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-border {
+    border-right: 5px solid #96ceb4;
+    margin: 0;
+}
+
+.bottom-border {
+    border-bottom: 5px solid #96ceb4;
+    margin: 0;
+}
+
+.strike {
+    position: absolute;
+    background-color: #ffcc5c;
+}
+
+.strike-row-1 {
+    width: 100%;
+    height: 4px;
+    top: 15%;
+}
+
+.strike-row-2 {
+    width: 100%;
+    height: 4px;
+    top: 48%;
+}
+
+.strike-row-3 {
+    width: 100%;
+    height: 4px;
+    top: 83%;
+}
+
+.strike-column-1 {
+    width: 4px;
+    height: 100%;
+    left: 15%;
+}
+
+.strike-column-2 {
+    width: 4px;
+    height: 100%;
+    left: 48%;
+}
+
+.strike-column-3 {
+    width: 4px;
+    height: 100%;
+    left: 83%;
+}
+
+.strike-diagonal-1 {
+    width: 90%;
+    height: 4px;
+    top: 44%;
+    transform: skewY(45deg);
+}
+
+.strike-diagonal-2 {
+    width: 90%;
+    height: 4px;
+    top: 53%;
+    transform: skewY(-45deg);
+}
+
+h2 {
+    color: currentColor;
+    margin-top: 0px;
+}
+
+button {
+    background-color:  #96ceb4;
+    color: currentColor;
+    border: 1px solid #ffcc5c;
+    padding: 5px;
+}
+
+#game-over-area {
+    text-align: center;
+    border: 5px solid #ffcc5c;
+    margin: 50px;
+    padding: 30px;
+    width: 30%;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
